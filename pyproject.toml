@@ -2,6 +2,7 @@
 name = "acbrlib-python"
 version = "0.1.0"
 description = "Camada de abstração para acesso à ACBrLib em Python"
+license = "Apache-2.0"
 authors = ["Daniel Gonçalves <daniel@base4.com.br>"]
 
 [tool.poetry.dependencies]
