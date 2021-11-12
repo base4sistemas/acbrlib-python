@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# acbrlib_python/__init__.py
+# acbrlib_python/cep/modelos.py
 #
 # Copyright 2021 Base4 Sistemas
 #
@@ -17,6 +17,17 @@
 # limitations under the License.
 #
 
-from .cep import *  # noqa:
+from dataclasses import dataclass
 
-__version__ = '0.1.0'
+
+@dataclass(frozen=True)
+class Endereco:
+    tipo_logradouro: str
+    logradouro: str
+    complemento: str
+    bairro: str
+    municipio: str
+    uf: str
+    cep: str
+    ibge_municipio: str
+    ibge_uf: str

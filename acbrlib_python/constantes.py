@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# acbrlib_python/__init__.py
+# acbrlib_python/constantes.py
 #
 # Copyright 2021 Base4 Sistemas
 #
@@ -17,6 +17,19 @@
 # limitations under the License.
 #
 
-from .cep import *  # noqa:
+from .cep.constantes import *  # noqa:
 
-__version__ = '0.1.0'
+AUTO = 'auto'
+STANDARD_C = 'cdecl'
+WINDOWS_STDCALL = 'stdcall'
+
+CALLING_CONVENTIONS = (
+        (AUTO, 'Automático (pela extensão)'),
+        (STANDARD_C, 'C Padrão (Cdecl)'),
+        (WINDOWS_STDCALL, 'Windows Padrão (StdCall)'),
+    )
+
+
+CONVENCOES_CHAMADA = CALLING_CONVENTIONS
+
+BUFFER_LENGTH = 1024

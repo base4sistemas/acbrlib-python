@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# acbrlib_python/__init__.py
+# acbrlib_python/cep/__init__.py
 #
 # Copyright 2021 Base4 Sistemas
 #
@@ -17,6 +17,6 @@
 # limitations under the License.
 #
 
-from .cep import *  # noqa:
+from .impl import ACBrLibCEP  # noqa:
 
-__version__ = '0.1.0'
+__all__ = ['ACBrLibCEP']

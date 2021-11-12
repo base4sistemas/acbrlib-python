@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# acbrlib_python/__init__.py
+# acbrlib_python/cep/excecoes.py
 #
 # Copyright 2021 Base4 Sistemas
 #
@@ -17,6 +17,16 @@
 # limitations under the License.
 #
 
-from .cep import *  # noqa:
+from ..excecoes import ACBrLibException
 
-__version__ = '0.1.0'
+
+class ACBrLibCEPException(ACBrLibException):
+    pass
+
+
+class ACBrLibCEPErro(Exception):
+    pass
+
+
+class ACBrLibCEPErroResposta(ACBrLibCEPErro):
+    pass

@@ -25,9 +25,11 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
+Unidecode = "^1.3.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
+ipython = "^7.28.0"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/base4sistemas/acbrlib-python/issues"

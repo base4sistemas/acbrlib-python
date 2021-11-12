@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# acbrlib_python/__init__.py
+# acbrlib_python/excecoes.py
 #
 # Copyright 2021 Base4 Sistemas
 #
@@ -17,6 +17,22 @@
 # limitations under the License.
 #
 
-from .cep import *  # noqa:
+from unidecode import unidecode
 
-__version__ = '0.1.0'
+
+class ACBrLibException(Exception):
+    def __init__(self, metodo=None, retorno=None, mensagem=None):
+        if not mensagem:
+            mensagem = f'Código de retorno inesperado: {retorno!r}'
+        mensagem = f'{mensagem} (método {metodo!r} retornou {retorno!r})'
+        self._metodo = metodo
+        self._retorno = retorno
+        super().__init__(unidecode(mensagem))
+
+    @property
+    def metodo(self):
+        return self._metodo
+
+    @property
+    def retorno(self):
+        return self._retorno
